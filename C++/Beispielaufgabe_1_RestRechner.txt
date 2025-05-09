@@ -1,0 +1,1 @@
+Schreiben Sie ein Programm, das zwei Integer-Zahlen über die Tastatur einliest und anschließend den Rest der Division auf dem Bildschirm ausgibt, ohne den % - Operator zu verwenden.

@@ -1,0 +1,2 @@
+ In der Netzwerktechnik wird das Subnetting dazu benutzt, innerhalb einer Netzklasse weitere Teilnetze zu bilden. Dabei werden IP-Adressen mit einer sogenannten Maske (Subnet- Mask) verknüpft und als Ergebnis erhält man eine Netzwerkadresse. Ist diese Netzwerkadresse bei zwei IP-Adressen gleich, so gehören die beiden IP-Adressen zum gleichen Teilnetz (Subnet).
+ Schreiben Sie ein Programm, welches zwei IP-Adressen (jeweils 4 Integer-Variablen) -und eine Subnet-Mask über die Tastatur einliest und anschließend die Netzwerkadresse auf dem Bildschirm ausgibt.
