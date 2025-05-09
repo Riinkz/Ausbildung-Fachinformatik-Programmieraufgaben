@@ -1,0 +1,26 @@
+Um später mit PHP sinnvoll zu arbeiten, ist es notwendig HTML – Befehle zu kennen.
+
+Erarbeiten Sie mit Hilfe des Internets eine eigene Webseite, welche folgende Mindestanforderungen enthält:
+
+-          Unterschiedliche Schriftgrößen
+
+-          Unterstrichener Text
+
+-          Unterschiedliche Schriftfarben
+
+-          Einrücken von Text
+
+-          Einfügen einer Grafik
+
+-          Verweis auf die Homepageseite der Schule
+
+-          Zeilenumbrüche
+
+-          …
+
+Sie haben für die Ausarbeitung 70 Minuten Zeit. Bereiten Sie sich darauf vor, ihr Ergebnis in der Klasse vorzustellen.
+
+Hinweis! Verwenden Sie ausschließlich HTML – Code, welchen Sie eigenständig programmieren.
+
+Gruppenarbeit mit Gruppen bis zu 3 Personen sind erwünscht.
+

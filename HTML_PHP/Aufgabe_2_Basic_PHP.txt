@@ -1,0 +1,86 @@
+Um einen PHP – Code in einer HTML-Seite zu implementieren, müssen Sie folgende HTML – Anweisung verwenden:
+
+Zum Starten
+
+<body>
+
+       <?php
+
+               PHP – Skript       …….
+
+       ?> // zum beenden vom Skript
+
+</body>
+
+ 
+
+Im PHP – Skript können Sie z.B. eine Textvariable anlegen und im Anschluss ausgeben lassen.
+
+Beispiel:
+
+                <?php
+
+                 $daten = "Hallo, EFIs!"; //Deklaration der Variablen daten
+
+                 echo $daten; //Ausgabebefehl für eine Variable
+
+                ?>
+
+Sie können auch direkt Texte bzw. HTML – Befehle ausgeben.
+
+Beispiel:
+
+                <?php
+
+                 $daten = "Hallo, EFIs!"; //Deklaration der Variablen daten
+
+                 echo '<h1>', $daten, '<br>', 'Seid ihr anwesend?'; //Ausgabebefehl mehrerer Anweisungen
+
+?>
+
+Weiterhin lassen sich Arrays bzw. assoziative Arrays anlegen.
+
+Hinweis: Ein Array besteht aus einer bestimmten Anzahl von Feldelementen. Die Ausgabe muss von daher über eine Schleife erfolgen
+
+Beispiel von Kundendaten numerisches Array:
+
+                <?php
+
+$kunden[0]=1;
+
+$kunden[1]="Schulze";
+
+$kunden[2]="Fritz";
+
+$kunden[3]="fritz.schulze@web.de";
+
+foreach($kunden as $element) //Schleifenausgabe mit den Inhalten des Arrays
+
+                echo $element,'<br>';
+
+?>
+
+ 
+
+               
+
+Beispiel von Kundendaten assoziatives Array (hier kann als Index auch eine Zeichenfolge verwendet werden):
+
+                <?php
+
+$kunden["Nr"]=1;
+
+$kunden["Name"]="Schulze";
+
+$kunden["Vorname"]="Fritz";
+
+$kunden["Mail"]="fritz.schulze@web.de";
+
+foreach($kunden as $key => $element)//Schleifenausgabe mit Indexname und den Inhalten
+
+                echo $key,':   ',$element,'<br>';
+
+?>
+
+Aufgabe: Realisieren Sie ein mehrdimensionales Array, welches folgende Inhalte enthät.
+Nutzen Sie ggf. das Internet als Hilfestellung!

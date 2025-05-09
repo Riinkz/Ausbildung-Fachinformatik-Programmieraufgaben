@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Grundlagen Tutorial</title>
+    <style>
+      /* Autor: Jamil Reußwig. */
+      /* Ein wenig internes CSS nur für die Lesbarkeit des Tutorials, nicht Teil der Aufgabe! */
+      body {
+        font-family: sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+        background-color: #f9f9f9; /* Heller Hintergrund für besseren Kontrast */
+        color: #333; /* Standard-Textfarbe */
+      }
+      h1,
+      h2,
+      h3 {
+        color: #0056b3; /* Blaue Überschriften */
+        border-bottom: 1px solid #ddd; /* Leichte Trennlinie unter Überschriften */
+        padding-bottom: 5px;
+      }
+      code {
+        background-color: #e9ecef; /* Hellerer Code-Hintergrund */
+        padding: 2px 6px;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        font-family: monospace;
+        color: #c7254e; /* Rötliche Farbe für Code */
+      }
+      pre {
+        background-color: #e9ecef;
+        padding: 15px;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        overflow-x: auto; /* Falls Code zu lang ist */
+        white-space: pre-wrap; /* Sorgt für besseren Zeilenumbruch im Code */
+        word-wrap: break-word;
+      }
+      .hinweis {
+        background-color: #fff3cd; /* Helleres Gelb für Hinweisbox */
+        border-left: 4px solid #ffeeba;
+        padding: 10px 15px;
+        margin: 15px 0;
+        border-radius: 4px;
+      }
+      strong {
+        color: #0056b3; /* Hervorhebungen auch in Blau */
+      }
+      a {
+        color: #007bff; /* Standard-Linkfarbe */
+        text-decoration: none; /* Keine Unterstreichung standardmäßig */
+      }
+      a:hover {
+        text-decoration: underline; /* Unterstreichung beim Hovern */
+        color: #0056b3;
+      }
+      ul {
+        list-style-type: square; /* Andere Art von Aufzählungszeichen */
+        padding-left: 20px;
+      }
+      img {
+        border: 1px solid #ddd; /* Leichter Rahmen um Bilder */
+        padding: 3px;
+        border-radius: 4px;
+        max-width: 100%; /* Stellt sicher, dass Bilder nicht über den Rand gehen */
+        height: auto; /* Behält Proportionen bei */
+      }
+      blockquote {
+        border-left: 3px solid #6c757d; /* Grauer Rand für Zitate */
+        padding-left: 15px;
+        margin-left: 0;
+        font-style: italic; /* Kursiv für Zitate */
+        color: #6c757d; /* Dunkelgraue Farbe für Zitate */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Willkommen zum HTML Grundlagen Tutorial!</h1>
+
+    <p>
+      Dieses Tutorial hilft dir dabei, eine einfache Webseite mit grundlegenden HTML-Befehlen zu erstellen. Das ist eine
+      gute Vorbereitung, um später mit PHP dynamische Webseiten zu bauen, da PHP oft HTML-Code generiert.
+    </p>
+
+    <h2>Die Aufgabe</h2>
+    <p>
+      Deine Aufgabe ist es, innerhalb von 70 Minuten eine eigene Webseite zu erstellen, die folgende Elemente enthält.
+      Benutze dazu <u>ausschließlich</u> HTML-Code, den du selbst schreibst:
+    </p>
+    <ul>
+      <li>Unterschiedliche Schriftgrößen</li>
+      <li>Unterstrichener Text</li>
+      <li>Unterschiedliche Schriftfarben</li>
+      <li>Einrücken von Text</li>
+      <li>Einfügen einer Grafik</li>
+      <li>Verweis auf die Homepageseite der Schule</li>
+      <li>Zeilenumbrüche</li>
+    </ul>
+    <p>Bereite dich darauf vor, dein Ergebnis der Klasse zu präsentieren.</p>
+    <div class="hinweis">
+      <strong>Wichtig:</strong> Diese Seite ist rein statisch. Sie verwendet kein JavaScript oder serverseitige Sprachen
+      wie PHP. Es geht nur um die Struktur und Darstellung mit HTML. Schreibe den Code selbst in einem Texteditor (z.B.
+      Notepad++, VS Code, Sublime Text, o.ä.). Der <code>&lt;style&gt;</code>-Block oben dient nur der besseren
+      Lesbarkeit dieses Tutorials!
+    </div>
+
+    <h2>HTML Grundlagen (Ganz kurz)</h2>
+    <p>
+      HTML steht für HyperText Markup Language. Es ist keine Programmiersprache, sondern eine
+      <strong>Auszeichnungssprache</strong>. Sie beschreibt die Struktur einer Webseite mit Hilfe von sogenannten
+      <strong>Tags</strong>.
+    </p>
+    <p>
+      Ein HTML-Tag besteht meistens aus einem öffnenden Tag (z.B. <code>&lt;p&gt;</code>) und einem schließenden Tag
+      (z.B. <code>&lt;/p&gt;</code>). Der Inhalt steht dazwischen.
+    </p>
+    <p>Eine grundlegende HTML-Datei sieht so aus:</p>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="de"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Titel der Seite&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Hier kommt der sichtbare Inhalt der Seite hin --&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    <p>
+      Der <code>&lt;head&gt;</code> enthält Meta-Informationen (nicht direkt sichtbar), der
+      <code>&lt;body&gt;</code> enthält den sichtbaren Inhalt.
+    </p>
+
+    <h2>Lösung der Aufgabe: Schritt für Schritt</h2>
+
+    <h3>1. Grundstruktur erstellen</h3>
+    <p>
+      Beginne mit der oben gezeigten Grundstruktur. Speichere die Datei mit der Endung <code>.html</code> (z.B.
+      <code>meine_seite.html</code>).
+    </p>
+
+    <h3>2. Unterschiedliche Schriftgrößen</h3>
+    <p>HTML bietet Überschriften-Tags von <code>&lt;h1&gt;</code> (größte) bis <code>&lt;h6&gt;</code> (kleinste).</p>
+    <pre><code>&lt;h1&gt;Das ist die größte Überschrift&lt;/h1&gt;
+&lt;h2&gt;Das ist eine etwas kleinere Überschrift&lt;/h2&gt;
+&lt;p&gt;Das ist ein normaler Textabsatz.&lt;/p&gt;
+&lt;h3&gt;Noch kleiner...&lt;/h3&gt;</code></pre>
+    <p>
+      Du kannst auch die Schriftgröße direkt mit dem <code>style</code>-Attribut ändern (fortgeschrittener, aber
+      nützlich):
+    </p>
+    <pre><code>&lt;p style="font-size: 20px;"&gt;Dieser Text ist 20 Pixel groß.&lt;/p&gt;
+&lt;p style="font-size: 10px;"&gt;Dieser Text ist nur 10 Pixel groß.&lt;/p&gt;</code></pre>
+    <p style="font-size: 20px">Dieser Text ist 20 Pixel groß.</p>
+    <p style="font-size: 10px">Dieser Text ist nur 10 Pixel groß.</p>
+
+    <h3>3. Unterstrichener Text</h3>
+    <p>Verwende den <code>&lt;u&gt;</code> Tag, um Text zu unterstreichen.</p>
+    <pre><code>&lt;p&gt;Dieser Text ist &lt;u&gt;unterstrichen&lt;/u&gt;.&lt;/p&gt;</code></pre>
+    <p>Dieser Text ist <u>unterstrichen</u>.</p>
+    <p>
+      (Hinweis: Semantisch korrekter ist oft CSS mit <code>style="text-decoration: underline;"</code>, aber für diese
+      Aufgabe ist <code>&lt;u&gt;</code> einfacher und erlaubt).
+    </p>
+
+    <h3>4. Unterschiedliche Schriftfarben</h3>
+    <p>
+      Um die Farbe eines Textes zu ändern, verwendest du das <code>style</code>-Attribut direkt im HTML-Tag (z.B. in
+      einem <code>&lt;p&gt;</code>-Tag). Innerhalb des <code>style</code>-Attributs nutzt du die CSS-Eigenschaft
+      <code>color</code> gefolgt von einem Doppelpunkt und dem Farbwert. Farbwerte können Farbnamen (wie
+      <code>red</code>, <code>blue</code>, <code>green</code>) oder Hexadezimal-Codes (wie <code>#FF0000</code> für Rot,
+      <code>#0000FF</code> für Blau) sein.
+    </p>
+    <p>Hier ist der Code dazu:</p>
+    <pre><code>&lt;p style="color: red;"&gt;Dieser Text ist rot.&lt;/p&gt;
+&lt;p style="color: blue;"&gt;Dieser Text ist blau.&lt;/p&gt;
+&lt;p style="color: #008000;"&gt;Dieser Text ist grün (als Hex-Code).&lt;/p&gt;
+&lt;p&gt;Man kann auch nur &lt;span style="color: orange;"&gt;einzelne Wörter&lt;/span&gt; färben.&lt;/p&gt;</code></pre>
+    <p>Und so sieht es dann aus:</p>
+    <p style="color: red">Dieser Text ist rot.</p>
+    <p style="color: blue">Dieser Text ist blau.</p>
+    <p style="color: #008000">Dieser Text ist grün (als Hex-Code).</p>
+    <p>Man kann auch nur <span style="color: orange">einzelne Wörter</span> färben.</p>
+    <h3>5. Einrücken von Text</h3>
+    <p>Der <code>&lt;blockquote&gt;</code> Tag eignet sich gut, um ganze Textblöcke einzurücken (z.B. für Zitate).</p>
+    <pre><code>&lt;p&gt;Normaler Text davor.&lt;/p&gt;
+&lt;blockquote&gt;
+    Dieser Textblock wird vom Browser eingerückt dargestellt. Er eignet sich gut für längere Zitate oder hervorgehobene Abschnitte.
+&lt;/blockquote&gt;
+&lt;p&gt;Normaler Text danach.&lt;/p&gt;</code></pre>
+    <p>Normaler Text davor.</p>
+    <blockquote>
+      Dieser Textblock wird vom Browser eingerückt dargestellt. Er eignet sich gut für längere Zitate oder
+      hervorgehobene Abschnitte.
+    </blockquote>
+    <p>Normaler Text danach.</p>
+    <p>
+      Für kleine Einrückungen am Anfang einer Zeile wird manchmal <code>&amp;nbsp;</code> (geschütztes Leerzeichen)
+      verwendet, aber das ist für größere Einrückungen unpraktisch und nicht empfohlen. CSS (<code>padding-left</code>
+      oder <code>text-indent</code>) wäre hier die bessere Methode, aber für diese Aufgabe ist
+      <code>&lt;blockquote&gt;</code> ausreichend.
+    </p>
+    <pre><code>&lt;!-- Beispiel mit &amp;nbsp; (eher vermeiden) --&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;Dieser Text ist leicht eingerückt.&lt;/p&gt;</code></pre>
+    <p>&nbsp;&nbsp;&nbsp;Dieser Text ist leicht eingerückt.</p>
+
+    <h3>6. Einfügen einer Grafik</h3>
+    <p>
+      Verwende den <code>&lt;img&gt;</code> Tag. Dieser Tag hat keinen schließenden Tag. Wichtige Attribute sind
+      <code>src</code> (Source = Quelle des Bildes) und <code>alt</code> (Alternativtext, falls das Bild nicht lädt oder
+      für Screenreader).
+    </p>
+    <pre><code>&lt;!-- Stelle sicher, dass das Bild im selben Ordner liegt --&gt;
+&lt;img src="cat.jpg" alt="Eine süße Katze" width="540" height="360"&gt;</code></pre>
+    <div class="hinweis">
+      Stelle sicher, dass sich die Bilddatei (z.B. <code>cat.jpg</code>) im selben Ordner wie deine HTML-Datei befindet,
+      oder gib den korrekten Pfad an (z.B. <code>src="bilder/logo.png"</code>). Der <code>alt</code>-Text ist wichtig
+      für Barrierefreiheit! Wenn du kein eigenes Bild hast, kannst du einen Platzhalter verwenden:
+      <code
+        >&lt;img src="https://placehold.co/540x360/EEE/31343C?text=Katzenbild" alt="Platzhalter Katzenbild"&gt;</code
+      >
+    </div>
+    <p>Hier ist das Beispielbild (oder ein Platzhalter):</p>
+    <img src="cat.jpg" alt="Eine süße Katze" width="540" height="360" />
+    <img
+      src="https://placehold.co/540x360/EEE/31343C?text=Katzenbild"
+      alt="Platzhalter Katzenbild"
+      style="display: none"
+      onerror="this.style.display='block'; this.previousElementSibling.style.display='none';"
+    />
+
+    <h3>7. Verweis auf die Homepageseite der Schule</h3>
+    <p>
+      Verwende den <code>&lt;a&gt;</code> Tag (Anchor = Anker) mit dem <code>href</code> Attribut (Hypertext Reference).
+      Ersetze die Beispiel-URL mit der echten URL deiner Schule.
+    </p>
+    <pre><code>&lt;a href="https://www.georg-sonnin-schule.de/"&gt;Besuche die Webseite unserer Schule&lt;/a&gt;</code></pre>
+    <p>Hier ist der Link:</p>
+    <a href="https://www.georg-sonnin-schule.de/">Besuche die Webseite unserer Schule</a>
+
+    <h3>8. Zeilenumbrüche</h3>
+    <p>
+      Normalerweise ignoriert HTML Zeilenumbrüche im Code. Wenn du einen Zeilenumbruch innerhalb eines Absatzes
+      erzwingen willst, ohne einen neuen Absatz zu beginnen, nutze den <code>&lt;br&gt;</code> Tag (Break). Dieser hat
+      keinen schließenden Tag.
+    </p>
+    <pre><code>&lt;p&gt;Dies ist die erste Zeile.&lt;br&gt;
+Dies ist die zweite Zeile, im selben Absatz.&lt;/p&gt;</code></pre>
+    <p>
+      Dies ist die erste Zeile.<br />
+      Dies ist die zweite Zeile, im selben Absatz.
+    </p>
+
+    <h2>Beispiel: Komplette Seite für die Aufgabe</h2>
+    <p>Hier ist ein Beispiel, wie deine fertige <code>meine_seite.html</code> aussehen könnte (nur der Body-Teil):</p>
+    <pre><code class="language-html">&lt;!-- Nur der Inhalt des &lt;body&gt; Tags --&gt;
+&lt;h1&gt;Willkommen auf meiner Übungsseite!&lt;/h1&gt;
+
+&lt;h2&gt;Über dieses Projekt&lt;/h2&gt;
+&lt;p&gt;Dies ist eine Webseite, erstellt im Rahmen des Unterrichts. Hier teste ich verschiedene HTML-Elemente.&lt;/p&gt;
+
+&lt;h3&gt;Formatierungen&lt;/h3&gt;
+&lt;p&gt;Man kann Text &lt;u&gt;unterstreichen&lt;/u&gt;.&lt;/p&gt;
+&lt;p style="color: green;"&gt;Man kann Text auch färben, zum Beispiel grün.&lt;/p&gt;
+&lt;p style="color: #FF00FF;"&gt;Oder in Magenta (mit Hex-Code)!&lt;/p&gt;
+&lt;p&gt;Hier kommt ein Zeilenumbruch:&lt;br&gt;Zack, neue Zeile!&lt;/p&gt;
+
+&lt;h3&gt;Einrückung&lt;/h3&gt;
+&lt;blockquote&gt;
+    Dieser Abschnitt ist mit 'blockquote' eingerückt. Das sieht oft ganz ordentlich aus für Zitate oder spezielle Hinweise.
+&lt;/blockquote&gt;
+
+&lt;h3&gt;Grafik einfügen&lt;/h3&gt;
+&lt;p&gt;Hier ist ein Beispielbild:&lt;/p&gt;
+&lt;!-- Stelle sicher, dass eine Datei namens 'logo.png' oder 'cat.jpg' im selben Ordner liegt! --&gt;
+&lt;img src="cat.jpg" alt="Eine Katze" width="150"&gt; &lt;!-- Bildquelle anpassen --&gt;
+
+&lt;h3&gt;Link zur Schule&lt;/h3&gt;
+&lt;p&gt;Hier geht es zur offiziellen Webseite unserer Schule:&lt;/p&gt;
+&lt;a href="https://www.georg-sonnin-schule.de/"&gt;Schulhomepage besuchen&lt;/a&gt;
+
+&lt;hr&gt; &lt;!-- hr = Horizontale Linie, ein weiteres nützliches Element --&gt;
+
+&lt;p style="font-size: small; color: grey;"&gt;Ende der Seite.&lt;/p&gt;
+</code></pre>
+
+    <h2>Tipps für die Aufgabe</h2>
+    <ul>
+      <li><strong>Speichern:</strong> Speichere deine Datei immer mit der Endung <code>.html</code>.</li>
+      <li>
+        <strong>Testen:</strong> Öffne die HTML-Datei im Browser. Nach jeder Änderung: Speichern & Neu laden (F5/Cmd+R).
+      </li>
+      <li>
+        <strong>Bildpfad:</strong> Achte darauf, dass der Pfad im <code>src</code>-Attribut des
+        <code>&lt;img&gt;</code>-Tags korrekt ist.
+      </li>
+      <li><strong>Schul-URL:</strong> Den richtigen Link zur Homepage einfügen</li>
+      <li><strong>Selber tippen:</strong> Versuche, die Tags selbst zu schreiben, um sie besser zu lernen.</li>
+    </ul>
+  </body>
+</html>
