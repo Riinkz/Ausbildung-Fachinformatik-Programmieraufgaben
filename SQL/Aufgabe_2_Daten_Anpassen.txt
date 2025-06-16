@@ -1,0 +1,17 @@
+Für die Aufgaben Hardwareverwaltung ist der anliegende Code zur Anlage der Datenbank zu kopieren. 
+
+CREATE DATABASE Hardwareverwaltung;
+
+CREATE TABLE monitor(MonitorID int NOT NULL primary key  Auto_Increment, Name text, Preis double DEFAULT NULL, Größe double DEFAULT NULL);
+
+INSERT INTO monitor VALUES (1,'24MB56HQ-B',240,23.8),(2,'U28E590D',233,28),(3,'VS278H',192,27),(4,'HD2700',300,27),(5,'V176Lbmd',120,17),(6,'LS34J552WQUXEN',360,34),(7,'E2783QSU-B1',249,27),(8,'BL702A',135,17),(9,'U2417H',354,24),(10,'GW2480',121,24),(11,'VX3276-2K-MHD',239,32),(12,'XB2283HS-B3',500,22),(13,'MR17S',70,17),(14,'G276HLLbmidx',156,27);
+
+___________________________________________________________________________________________________________________
+
+Nur so können die folgenden Aufgaben gelöst werden:
+
+- Fügen Sie den Datensatz mit Name "UW3420K", Preis "543€" Größe "34 Zoll" in die Tabelle ein.
+- Senken Sie den Preis von allen 27"-Monitoren um 5%.
+- Ändern Sie den Namen des Monitors mit der ID "4" auf "HD2771".
+- Löschen Sie den Preis des Monitors mit der ID "12".
+- Löschen Sie alle 17"-Monitore.

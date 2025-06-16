@@ -1,0 +1,17 @@
+Tabelle anlegen (Copy and Paste):
+```mySQL
+create database wohnungsverwaltung;
+
+create table Wohnung(WohnungsNr int not null primary key auto_increment,AnzahlRäume text, Wohnfläche real, Kaltmiete real, Vermietet text);
+
+insert into Wohnung values(1,3,67.3,730,1),(2,4,80.5,880,0),(3,5,99,1200,1),(4,3,71.8,940,1), (5,5,120,1400,0),(6,2,45.8,500,0),(7,2,46.2,490,1),(8,4,85.4,795,0),(9,4,85.9,990,1),(10,3,71.5,890,0);
+```
+
+Legen Sie eine Tabelle mit Hilfe der anliegenden Befehle (Copy and Paste) in MySQL an und führen Sie folgende Befehle durch:
+
+- Listen Sie alle Daten der Tabelle.
+- Listen Sie alle Wohnungsnummern auf, welche drei und mehr Räume und eine Kaltmiete unter 1000€ haben.
+- Listen Sie die Wohnungsnummern und die Wohnfläche von allen Wohnungen mit einer Wohnfläche von 50 bis 100 qm auf. Sortieren Sie die Ergebnisse absteigend nach Wohnfläche.
+- Ermitteln Sie die Durchschnittswohnfläche aller Wohnungen.
+- Ermitteln Sie die niedrigste Kaltmiete einer Vier-Zimmer-Wohnung.
+- Ermitteln Sie die Anzahl der freien Wohnungen.

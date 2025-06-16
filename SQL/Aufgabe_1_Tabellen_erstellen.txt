@@ -1,0 +1,9 @@
+1. Legen Sie eine Tabelle "Gewaesser" mit den Attributen GewNr als Primärschlüssel, Name, Laenge und Breite an.
+
+2. Fügen Sie der Tabelle nachträglich das Attribut "Tiefe" mit einem ganzzahligen Datentyp hinzu.
+
+3. Ändern Sie nachträglich den Datentyp vom Attribut "Tiefe" in einen Fließkommawert.
+
+4. Löschen Sie dann das Attribut "Tiefe".
+
+5. Löschen Sie die Tabelle komplett.
